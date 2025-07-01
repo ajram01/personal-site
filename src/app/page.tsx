@@ -2,6 +2,7 @@
 import Head from 'next/head';
 import { useFadeInOnScroll } from './hooks/useFadeInOnScroll';
 import './styles/portfolio.css';
+import Image from 'next/image';
 
 const projectsData = [
   {
@@ -155,10 +156,12 @@ export default function Home() {
                       className={`project-card fade-in ${projects.isVisible ? 'visible' : ''}`}
                     >
                 <div className="project-image">
-                  <img
-                    src={proj.image}
+                  <Image 
+                    src={proj.image} 
                     alt={proj.title}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    width={600}
+                    height={400}
+                    style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
                   />
                 </div>
                 <div className="project-content">
