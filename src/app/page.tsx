@@ -129,7 +129,7 @@ export default function Home() {
           <div className={`education-card fade-in ${education.isVisible ? 'visible' : ''}`}>
             <h3>Bachelor of Science in Computer Science</h3>
             <p className="university">University of Texas Rio Grande Valley</p>
-            <p className="year">2020 - 2025</p>
+            <p className="year">2020 - 2024</p>
             <p className="details">
               Focused on software engineering principles, data structures, algorithms, and web development. 
               Completed coursework in database systems, software design patterns, and computer networks.
