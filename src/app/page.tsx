@@ -8,7 +8,7 @@ const projectsData = [
   {
     title: 'RioPlex Business Exchange',
     type: 'Client Project',
-    description: 'Developed a business listing app in Next.js with investor access and membership logic.',
+    description: "Built a modern listing platform in Next.js that connects local businesses with potential investors. Designed for visibility and deal flow, the site supports business owners seeking growth or exit opportunities with a clean interface and role-based access.",
     tech: ['Next.js', 'Supabase', 'Auth', 'Node'],
     image: '/project-images/rpbx-homepage.png',
     link: 'https://rioplexbusinessexchange.com/',
@@ -16,7 +16,7 @@ const projectsData = [
   {
     title: 'RGVision Media',
     type: 'Client Project',
-    description: 'Redesigned the marketing agency&apos;s site to showcase their creative services, client portfolio, and media solutions with a modern, conversion-focused layout.',
+    description: "Redesigned the marketing agency's site to showcase their creative services, client portfolio, and media solutions with a modern, conversion-focused layout.",
     tech: ['WordPress', 'HTML/CSS', 'JS', 'Elementor'],
     image: '/project-images/rgvm-homepage.png',
     link: 'https://rgvisionmedia.com/',
@@ -24,7 +24,7 @@ const projectsData = [
   {
     title: 'BFI Analytics Dashboard',
     type: 'Non-Profit Project',
-    description: 'Built a dashboard using Next.js + Supabase to visualize city pothole data.',
+    description: "Developed a data-driven dashboard in Next.js and Supabase to visualize pothole case trends across San Antonio. Enabled civic partners to analyze repair patterns with interactive charts and a chatbot powered by LangChain and OpenAI.",
     tech: ['Next.js', 'Supabase', 'LancChain', 'OpenAI', 'RAG'],
     image: '/project-images/bfi-dashboard.png',
     link: 'https://dashboard-jsamp1vyj-bfi.vercel.app/Forecast',
@@ -32,10 +32,18 @@ const projectsData = [
   {
     title: 'Walter Reyna',
     type: 'Client Project',
-    description: 'Built a sleek informational site for a certified financial planner focused on retirement and wealth management. Highlights Reyna&apos;s credentials, services, and client-first philosophy with responsive, professional design.',
-    tech: ['Next.js', 'Supabase', 'LangChain', 'OpenAI'],
+    description: "Built a sleek informational site for a certified financial planner focused on retirement and wealth management. Highlights Reyna's credentials, services, and client-first philosophy with responsive, professional design.",
+    tech: ['WordPress', 'HTML/CSS', 'JS', 'Elementor'],
     image: '/project-images/reyna-homepage.png',
     link: 'https://walterreyna.com/',
+  },
+  {
+    title: 'Luna OBGYN',
+    type: 'Client Project',
+    description: "Developed a polished, responsive site for a board-certified OBGYN and minimally invasive surgery specialist in the Rio Grande Valley. The site highlights Dr. Luna's qualifications, services, blog on women's health, and patient resources—offering a seamless, professionally tailored experience",
+    tech: ['WordPress', 'HTML/CSS', 'JS', 'Elementor'],
+    image:'/project-images/luna-homepage.png',
+    link: 'https://reneilunamd.com/',
   },
 ];
 
