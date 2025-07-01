@@ -15,7 +15,7 @@ const projectsData = [
   {
     title: 'RGVision Media',
     type: 'Client Project',
-    description: 'Redesigned the marketing agency’s site to showcase their creative services, client portfolio, and media solutions with a modern, conversion-focused layout.',
+    description: 'Redesigned the marketing agency&apos;s site to showcase their creative services, client portfolio, and media solutions with a modern, conversion-focused layout.',
     tech: ['WordPress', 'HTML/CSS', 'JS', 'Elementor'],
     image: '/project-images/rgvm-homepage.png',
     link: 'https://rgvisionmedia.com/',
@@ -31,7 +31,7 @@ const projectsData = [
   {
     title: 'Walter Reyna',
     type: 'Client Project',
-    description: 'Built a sleek informational site for a certified financial planner focused on retirement and wealth management. Highlights Reyna’s credentials, services, and client-first philosophy with responsive, professional design.',
+    description: 'Built a sleek informational site for a certified financial planner focused on retirement and wealth management. Highlights Reyna&apos;s credentials, services, and client-first philosophy with responsive, professional design.',
     tech: ['Next.js', 'Supabase', 'LangChain', 'OpenAI'],
     image: '/project-images/reyna-homepage.png',
     link: 'https://walterreyna.com/',
@@ -65,7 +65,7 @@ export default function Home() {
         {/* Hero Section */}
         <section id="home" className="hero" ref={hero.ref}>
           <div className={`hero-content fade-in ${hero.isVisible ? 'visible' : ''}`}>
-            <h1>Hi, I'm <span className="highlight">Anthony</span></h1>
+            <h1>Hi, I&apos;m <span className="highlight">Anthony</span></h1>
             <p className="hero-subtitle">Full Stack Developer</p>
             <p className="hero-description">
               I build modern web applications and deliver digital solutions for clients. 
@@ -114,7 +114,6 @@ export default function Home() {
               <div className="skill-tags">
                 <span className="skill-tag">Git</span>
                 <span className="skill-tag">Docker</span>
-                <span className="skill-tag">AWS</span>
                 <span className="skill-tag">Vercel</span>
                 <span className="skill-tag">Figma</span>
                 <span className="skill-tag">VS Code</span>
@@ -181,9 +180,9 @@ export default function Home() {
         {/* Contact Section */}
         <section id="contact" className="section" ref={contact.ref}>
           <div className={`contact fade-in ${contact.isVisible ? 'visible' : ''}`}>
-            <h2>Let's Work Together</h2>
+            <h2>Let&apos;s Work Together</h2>
             <p className="contact-description">
-              I'm always interested in new opportunities and interesting projects. 
+              I&apos;m always interested in new opportunities and interesting projects. 
               Let's connect and see what we can build together.
             </p>
             <div className="contact-links">
