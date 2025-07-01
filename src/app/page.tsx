@@ -1,103 +1,206 @@
-import Image from "next/image";
+'use client'
+import Head from 'next/head';
+import { useFadeInOnScroll } from './hooks/useFadeInOnScroll';
+import './styles/portfolio.css';
+
+const projectsData = [
+  {
+    title: 'RioPlex Business Exchange',
+    type: 'Client Project',
+    description: 'Developed a business listing app in Next.js with investor access and membership logic.',
+    tech: ['Next.js', 'Supabase', 'Auth', 'Node'],
+    image: '/project-images/rpbx-homepage.png',
+    link: 'https://rioplexbusinessexchange.com/',
+  },
+  {
+    title: 'RGVision Media',
+    type: 'Client Project',
+    description: 'Redesigned the marketing agency’s site to showcase their creative services, client portfolio, and media solutions with a modern, conversion-focused layout.',
+    tech: ['WordPress', 'HTML/CSS', 'JS', 'Elementor'],
+    image: '/project-images/rgvm-homepage.png',
+    link: 'https://rgvisionmedia.com/',
+  },
+  {
+    title: 'BFI Analytics Dashboard',
+    type: 'Non-Profit Project',
+    description: 'Built a dashboard using Next.js + Supabase to visualize city pothole data.',
+    tech: ['Next.js', 'Supabase', 'LancChain', 'OpenAI', 'RAG'],
+    image: '/project-images/bfi-dashboard.png',
+    link: 'https://dashboard-jsamp1vyj-bfi.vercel.app/Forecast',
+  },
+  {
+    title: 'Walter Reyna',
+    type: 'Client Project',
+    description: 'Built a sleek informational site for a certified financial planner focused on retirement and wealth management. Highlights Reyna’s credentials, services, and client-first philosophy with responsive, professional design.',
+    tech: ['Next.js', 'Supabase', 'LangChain', 'OpenAI'],
+    image: '/project-images/reyna-homepage.png',
+    link: 'https://walterreyna.com/',
+  },
+];
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const hero = useFadeInOnScroll();
+  const skills = useFadeInOnScroll();
+  const education = useFadeInOnScroll();
+  const projects = useFadeInOnScroll();
+  const contact = useFadeInOnScroll();
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+  return (
+    <>
+      <Head>
+        <title>Anthony Ramirez - Full Stack Developer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
+
+      <div>
+        {/* Navigation */}
+        <nav className="nav">
+          <a href="#home" className="nav-item">Home</a>
+          <a href="#skills" className="nav-item">Skills</a>
+          <a href="#education" className="nav-item">Education</a>
+          <a href="#projects" className="nav-item">Work</a>
+          <a href="#contact" className="nav-item">Contact</a>
+        </nav>
+
+        {/* Hero Section */}
+        <section id="home" className="hero" ref={hero.ref}>
+          <div className={`hero-content fade-in ${hero.isVisible ? 'visible' : ''}`}>
+            <h1>Hi, I'm <span className="highlight">Anthony</span></h1>
+            <p className="hero-subtitle">Full Stack Developer</p>
+            <p className="hero-description">
+              I build modern web applications and deliver digital solutions for clients. 
+              Currently working as a developer creating custom websites and applications 
+              while exploring new technologies in my free time.
+            </p>
+            <div className="cta-buttons">
+              <a href="#projects" className="btn btn-primary">
+                View My Work <span>→</span>
+              </a>
+              <a href="#contact" className="btn btn-secondary">
+                Get In Touch
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Skills Section */}
+        <section id="skills" className="section" ref={skills.ref}>
+          <h2 className={`section-title fade-in ${skills.isVisible ? 'visible' : ''}`}>What I <span className="accent">Work With</span></h2>
+          <div className="skills-grid">
+            <div className={`skill-card fade-in ${skills.isVisible ? 'visible' : ''}`}>
+              <h3>Frontend</h3>
+              <div className="skill-tags">
+                <span className="skill-tag">React</span>
+                <span className="skill-tag">Next.js</span>
+                <span className="skill-tag">TypeScript</span>
+                <span className="skill-tag">Vue.js</span>
+                <span className="skill-tag">Tailwind CSS</span>
+                <span className="skill-tag">JavaScript</span>
+              </div>
+            </div>
+            <div className={`skill-card fade-in ${skills.isVisible ? 'visible' : ''}`}>
+              <h3>Backend</h3>
+              <div className="skill-tags">
+                <span className="skill-tag">Node.js</span>
+                <span className="skill-tag">Python</span>
+                <span className="skill-tag">Express</span>
+                <span className="skill-tag">Django</span>
+                <span className="skill-tag">PostgreSQL</span>
+                <span className="skill-tag">MongoDB</span>
+              </div>
+            </div>
+            <div className={`skill-card fade-in ${skills.isVisible ? 'visible' : ''}`}>
+              <h3>Tools & Deployment</h3>
+              <div className="skill-tags">
+                <span className="skill-tag">Git</span>
+                <span className="skill-tag">Docker</span>
+                <span className="skill-tag">AWS</span>
+                <span className="skill-tag">Vercel</span>
+                <span className="skill-tag">Figma</span>
+                <span className="skill-tag">VS Code</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Education Section */}
+        <section id="education" className="section" ref={education.ref}>
+          <h2 className={`section-title fade-in ${education.isVisible ? 'visible' : ''}`}>Education</h2>
+          <div className={`education-card fade-in ${education.isVisible ? 'visible' : ''}`}>
+            <h3>Bachelor of Science in Computer Science</h3>
+            <p className="university">University of Texas Rio Grande Valley</p>
+            <p className="year">2020 - 2025</p>
+            <p className="details">
+              Focused on software engineering principles, data structures, algorithms, and web development. 
+              Completed coursework in database systems, software design patterns, and computer networks.
+            </p>
+          </div>
+        </section>
+
+        {/* Projects Section */}
+        <section id="projects" className="section" ref={projects.ref}>
+          <div className={`projects-header fade-in ${projects.isVisible ? 'visible' : ''}`}>
+            <h2 className="section-title">My <span className="accent">Work</span></h2>
+            <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem' }}>
+              A collection of client projects and personal work
+            </p>
+          </div>
+          <div className="projects-grid">
+            {projectsData.map((proj, i) => (
+              <div key={i} className={`project-card fade-in ${projects.isVisible ? 'visible' : ''}`} data-category={proj.type.includes('Client') ? 'client' : 'personal'}>
+                    <a
+                      href={proj.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      key={i}
+                      className={`project-card fade-in ${projects.isVisible ? 'visible' : ''}`}
+                    >
+                <div className="project-image">
+                  <img
+                    src={proj.image}
+                    alt={proj.title}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
+                </div>
+                <div className="project-content">
+                  <div className="project-type">{proj.type}</div>
+                  <h3>{proj.title}</h3>
+                  <p className="project-description">{proj.description}</p>
+                  <div className="project-tech">
+                    {proj.tech.map((tag, j) => (
+                      <span key={j} className="tech-tag">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+                </a>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="section" ref={contact.ref}>
+          <div className={`contact fade-in ${contact.isVisible ? 'visible' : ''}`}>
+            <h2>Let's Work Together</h2>
+            <p className="contact-description">
+              I'm always interested in new opportunities and interesting projects. 
+              Let's connect and see what we can build together.
+            </p>
+            <div className="contact-links">
+              <a href="mailto:anthonyj0127@gmail.com" className="contact-link">
+                <span>📧</span> Email Me
+              </a>
+              <a href="https://www.linkedin.com/in/anthony-ramirez01/" className="contact-link" target="_blank">
+                <span>💼</span> LinkedIn
+              </a>
+              <a href="https://github.com/ajram01" className="contact-link" target="_blank">
+                <span>🐙</span> GitHub
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }
+
