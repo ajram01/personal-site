@@ -186,7 +186,7 @@ export default function Home() {
             <h2>Let&apos;s Work Together</h2>
             <p className="contact-description">
               I&apos;m always interested in new opportunities and interesting projects. 
-              Let's connect and see what we can build together.
+              Let&apos;s connect and see what we can build together.
             </p>
             <div className="contact-links">
               <a href="mailto:anthonyj0127@gmail.com" className="contact-link">
